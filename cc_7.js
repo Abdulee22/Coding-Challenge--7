@@ -50,6 +50,14 @@ return `Current Balance: $${balance}`;};}
 let budget = createBudgetTracker();
 console.log(budget(300)); // output -300
 console.log(budget(200)); // output -500
+
+// Task 8 - Business Growth Projection //
+function calculateGrowth(years, revenue) { // Function
+if (years >= 10) return `Projected Revenue: $${revenue.toFixed(2)}`; // 5% for 10 years
+return calculateGrowth(years + 1, revenue * 1.05);}
+console.log(calculateGrowth(8, 1000)); // output 1102.50
+console.log(calculateGrowth(5, 5000)); // output 6381.41
+    
     
 
     

@@ -20,3 +20,11 @@ return `Discounted Price: $${discountedPrice.toFixed(2)}`;};
 console.log(calculateLoyaltyDiscount(100, 6)); // output 85.00
 console.log(calculateLoyaltyDiscount(200, 2)); // output 190.00
         
+// Task 4 - Product Shipping Cost Calculation //
+function calculateShippingCost(weight, location, expedited = false) { // Function
+let baseCost = location === "USA" ? 5 + (0.5 * weight) : 10 + (0.7 * weight); // Fees
+if (expedited) baseCost += 10;
+ return `Shipping Cost: $${baseCost.toFixed(2)}`;}
+console.log(calculateShippingCost(10, "USA", true)); // output 20.00
+console.log(calculateShippingCost(5, "Canada", false)); // output 13.50
+    

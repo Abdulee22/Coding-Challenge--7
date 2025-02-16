@@ -34,5 +34,12 @@ let interest = principal * rate * years; // Interest Formula
 return `Total Interest: $${interest.toFixed(2)}`;}
 console.log(calculateLoanInterest(1000, 0.05, 3)); // output 150.00
 console.log(calculateLoanInterest(5000, 0.07, 5)); // output 1750.00
+
+// Task 6 - Filtering High-Value Transactions //
+let transactions = [500, 1200, 3000, 800, 2200]; // Values
+function filterHighValueTransactions(transactions, filterFunction) { // Function
+return transactions.filter(filterFunction);}
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // output [1200, 3000, 2200]
+
     
     

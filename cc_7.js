@@ -41,5 +41,16 @@ function filterHighValueTransactions(transactions, filterFunction) { // Function
 return transactions.filter(filterFunction);}
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // output [1200, 3000, 2200]
 
+// Task 7 - Budget Tracker //
+function createBudgetTracker() { // Function
+let balance = 0;
+return function(expense) 
+{balance -= expense; // Expenses
+return `Current Balance: $${balance}`;};}
+let budget = createBudgetTracker();
+console.log(budget(300)); // output -300
+console.log(budget(200)); // output -500
+    
+
     
     

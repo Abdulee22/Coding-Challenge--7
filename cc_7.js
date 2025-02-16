@@ -12,4 +12,11 @@ return `Hourly Wage: $${hourlyWage.toFixed(2)}`;};
 console.log(calculateHourlyWage(52000, 40)); // output 25.00
 console.log(calculateHourlyWage(75000, 35)); // output 41.21
     
-    
+// Task 3 - Customer Loyalty Discount //
+const calculateLoyaltyDiscount = (amount, years) => {
+let discountRate = years >= 5 ? 0.15 : years >= 3 ? 0.10 : 0.05; // function
+let discountedPrice = amount * (1 - discountRate); // Discount
+return `Discounted Price: $${discountedPrice.toFixed(2)}`;};
+console.log(calculateLoyaltyDiscount(100, 6)); // output 85.00
+console.log(calculateLoyaltyDiscount(200, 2)); // output 190.00
+        

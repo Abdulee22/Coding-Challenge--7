@@ -27,4 +27,12 @@ if (expedited) baseCost += 10;
  return `Shipping Cost: $${baseCost.toFixed(2)}`;}
 console.log(calculateShippingCost(10, "USA", true)); // output 20.00
 console.log(calculateShippingCost(5, "Canada", false)); // output 13.50
+
+// Task 5 - Business Loan Interest Calculation //
+function calculateLoanInterest(principal, rate, years) { // Function
+let interest = principal * rate * years; // Interest Formula
+return `Total Interest: $${interest.toFixed(2)}`;}
+console.log(calculateLoanInterest(1000, 0.05, 3)); // output 150.00
+console.log(calculateLoanInterest(5000, 0.07, 5)); // output 1750.00
+    
     
